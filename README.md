@@ -49,5 +49,6 @@ panel or let customers loose to edit the content.
 
 ## Changelog
 
+v1.0.2 — Fix snippets includes + old-browsers snippet
 v1.0.1 — Installation instructions  
 v1.0.0 — Initial commit
