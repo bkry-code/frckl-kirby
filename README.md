@@ -38,3 +38,7 @@ liking or deploy those files manually, if needed.
 
 I recommend to add the folder `content` to .gitignore as well, if you use the
 panel or let customers loose to edit the content.
+
+## License
+
+[Same as kirby's](license.md). Please support this project and [get your license now](http://getkirby.com/buy)! 
