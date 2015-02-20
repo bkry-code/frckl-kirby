@@ -1,0 +1,10 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Steffen Rademacker -- Webdeveloper -- http://webgefrickel.de -- @webgefrickel
+
+# THANKS
+
+    <name>

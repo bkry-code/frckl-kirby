@@ -1,0 +1,10 @@
+* text=auto
+assets/css/main.css -diff
+assets/css/main.min.css -diff
+assets/js/main.js -diff
+assets/js/main.min.js -diff
+assets/css/main.css merge=ours
+assets/css/main.min.css merge=ours
+assets/js/main.js merge=ours
+assets/js/main.min.js merge=ours
+
