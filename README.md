@@ -11,7 +11,11 @@ Clone this repo as your public folder, enter the directory and run the following
 command to install the needed submodules:
 
 ```
-git submodule foreach --recursive git submodule update --init
+git submodule init
+git submodule update
+cd kirby
+git submodule init
+git submodule update
 ```
 
 After having installed all submodules you have to create a configuration:
