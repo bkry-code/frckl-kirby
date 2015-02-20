@@ -1,6 +1,6 @@
 <?php
 // please set your license key here
-c::set('license', '');
+c::set('license', 'schalalalallaa');
 
 // markdown extra for tables and other stuff
 c::set('markdown.extra', true);
