@@ -42,3 +42,7 @@ panel or let customers loose to edit the content.
 ## License
 
 [Same as kirby's](license.md). Please support this project and [get your license now](http://getkirby.com/buy)! 
+
+## Changelog
+
+v1.0.0 — Initial commit
