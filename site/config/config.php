@@ -1,30 +1,25 @@
 <?php
+// please set your license key here
+c::set('license', '');
 
-/*
+// markdown extra for tables and other stuff
+c::set('markdown.extra', true);
 
----------------------------------------
-License Setup
----------------------------------------
+// debugging mode for development / staging using .env-files
+// remove the env-file or add additional configs, e.g.
+// .env-staging for different environments and settings
+if (file_exists(dirname( __FILE__ ) . '/.env-development')) {
 
-Please add your license key, which you've received
-via email after purchasing Kirby on http://getkirby.com/buy
+  c::set('debug', true); // this is for kirbys own debug mode
+  c::set('debugmode', true); // this is used for including different css/js
 
-It is not permitted to run a public website without a
-valid license key. Please read the End User License Agreement
-for more information: http://getkirby.com/license
+} else if (file_exists(dirname( __FILE__ ) . '/.env-staging')) {
 
-*/
+  c::set('debug', true);
+  c::set('debugmode', true);
 
-c::set('license', 'put your license key here');
+} else {
 
-/*
-
----------------------------------------
-Kirby Configuration
----------------------------------------
-
-By default you don't have to configure anything to
-make Kirby work. For more fine-grained configuration
-of the system, please check out http://getkirby.com/docs/advanced/options
-
-*/
+  c::set('debug', false);
+  c::set('debugmode', false);
+}
