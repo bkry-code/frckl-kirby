@@ -49,4 +49,5 @@ panel or let customers loose to edit the content.
 
 ## Changelog
 
+v1.0.1 — Installation instructions
 v1.0.0 — Initial commit
