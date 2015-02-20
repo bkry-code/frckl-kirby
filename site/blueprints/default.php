@@ -1,11 +1,11 @@
 <?php if(!defined('KIRBY')) exit ?>
 
-title: Page
+title: Default
 pages: true
 files: true
 fields:
   title:
-    label: Title
+    label: Pagetitle
     type:  text
   text:
     label: Text
