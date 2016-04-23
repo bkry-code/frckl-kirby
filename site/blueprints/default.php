@@ -9,4 +9,11 @@ fields:
     type:  text
   text:
     label: Text
-    type:  textarea
+    type: markdown
+    header1: h2
+    header2: h3
+    tools:
+      - header1
+      - header2
+      - unorderedList
+      - link

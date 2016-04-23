@@ -1,3 +1,3 @@
-<a href="<?= $site->url() ?>" class="site-logo" title="<?= $site->title() ?>">
-  <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Logo" class="site-logo__image" />
+<a href="<?= $site->url() ?>" class="logo" title="Back to the homepage | <?= $site->title() ?>">
+  <?php snippet('icon', [ 'icon' => 'logo' ]) ?>
 </a>
