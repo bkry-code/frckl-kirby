@@ -28,19 +28,29 @@
       <meta name="twitter:title" content="<?= html($page->title() . ' | ' . $site->title()) ?>" />
     <?php endif ?>
 
+    <?php if ($page->template() === 'article'): ?>
+      <meta property="og:description" content="<?= html($page->intro()) ?>" />
+      <meta name="twitter:description" content="<?= html($page->intro()) ?>" />
+    <?php else: ?>
+      <meta property="og:description" content="<?= html($site->description()) ?>" />
+      <meta name="twitter:description" content="<?= html($site->description()) ?>" />
+    <?php endif ?>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<?= $page->url() ?>" />
     <meta property="og:site_name" content="<?= html($site->title()) ?>" />
-    <meta property="og:description" content="<?= html($site->description()) ?>" />
     <meta property="og:image" content="<?= $site->url() ?>/preview.jpg" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@<?= $site->social() ?>" />
-    <meta name="twitter:description" content="<?= html($site->description()) ?>" />
     <meta name="twitter:image" content="<?= $site-url() ?>/apple-touch-icon.png" />
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
+    <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#323232" />
+    <meta name="theme-color" content="#323232" />
+    <link rel="manifest" href="/manifest.json" />
 
     <?php if (c::get('debugmode')): ?>
       <link rel="stylesheet" href="/assets/css/main.css" />
@@ -53,15 +63,14 @@
 
     <?php else: // just load the minified css, should be in cache now anyway ?>
       <link rel="stylesheet" href="/assets/css/main.min.<?= c::get('sharedconfig')->hash ?>.css" />
-
     <?php endif ?>
   </head>
 
   <body>
 
-    <header class="header  js-header">
+    <header class="header">
       <?php snippet('nav') ?>
       <?php snippet('logo') ?>
     </header>
 
-    <main class="main  js-main">
+    <main class="main">
