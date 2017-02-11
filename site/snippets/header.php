@@ -36,14 +36,14 @@
     <link rel="manifest" href="/manifest.json" />
 
     <?php if (c::get('debugmode')): ?>
-      <link rel="stylesheet" href="/assets/css/main.css" />
+      <?= css('assets/css/main.css') ?>
     <?php elseif ($page->isHomePage()): // only load the critical stuff, rest via js ?>
       <style><?= @file_get_contents('./assets/css/critical.min.css') ?></style>
       <script><?= @file_get_contents('./assets/js/loadcss.min.js') ?></script>
-      <script>window.loadCSS('/assets/css/main.min.<?= c::get('sharedconfig')->hash ?>.css');</script>
-      <noscript><link rel="stylesheet" href="/assets/css/main.min.<?= c::get('sharedconfig')->hash ?>.css" /></noscript>
+      <script>window.loadCSS('/assets/css/main.min.<?= @c::get('sharedconfig')->hash ?>.css');</script>
+      <noscript><?= css('assets/css/main.min.' . @c::get('sharedconfig')->hash . '.css') ?></noscript>
     <?php else: // just load the minified css, should be in cache now anyway ?>
-      <link rel="stylesheet" href="/assets/css/main.min.<?= c::get('sharedconfig')->hash ?>.css" />
+      <?= css('assets/css/main.min.' . @c::get('sharedconfig')->hash . '.css') ?>
     <?php endif ?>
   </head>
 

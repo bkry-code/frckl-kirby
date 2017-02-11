@@ -1,13 +1,12 @@
     </main>
 
     <?php if (c::get('debugmode')): ?>
-      <script src="/assets/js/main.js"></script>
-
+      <?= js('/assets/js/main.js') ?>
     <?php else: ?>
-      <script src="/assets/js/main.min.<?= c::get('sharedconfig')->hash ?>.js"></script>
+      <?= js('/assets/js/main.min.' . @c::get('sharedconfig')->hash . '.js') ?>
       <script>
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/serviceworker.<?= c::get('sharedconfig')->hash ?>.js');
+          navigator.serviceWorker.register('/serviceworker.<?= @c::get('sharedconfig')->hash ?>.js');
         }
       </script>
     <?php endif ?>
